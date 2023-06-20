@@ -6,6 +6,7 @@ import {RegisterComponent} from "./auth-components/register-component/register.c
 import {UserProfileComponent} from "./profile-components/user-profile/user-profile.component";
 import {ChatDomainComponent} from "./messanger-components/chat-domain/chat-domain.component";
 import {AncientPageComponent} from "./ancientpage/ancient-page.component";
+import {ProductComponent} from "./product/product.component";
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'profile', component: UserProfileComponent},
   {path: 'chat', component: ChatDomainComponent},
-  {path: 'ancient-page', component: AncientPageComponent}
+  {path: 'ancient-page', component: AncientPageComponent},
+  {path: 'product', component: ProductComponent},
 ];
 
 

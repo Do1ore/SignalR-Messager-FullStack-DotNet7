@@ -21,6 +21,7 @@ import { ChatDetailsComponent } from './messanger-components/chat-details/chat-d
 import { ChatDomainComponent } from './messanger-components/chat-domain/chat-domain.component';
 import { TruncateTextPipe } from './services/pipes/truncate-text.pipe';
 import { AncientPageComponent } from './ancientpage/ancient-page.component';
+import { ProductComponent } from './product/product.component';
 
 export function jwtOptionsFactory(): JwtModuleOptions {
   return {
@@ -44,6 +45,7 @@ export function jwtOptionsFactory(): JwtModuleOptions {
     ChatDomainComponent,
     TruncateTextPipe,
     AncientPageComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

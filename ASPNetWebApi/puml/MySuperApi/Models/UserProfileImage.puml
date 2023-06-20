@@ -1,10 +1,10 @@
 @startuml
 class UserProfileImage {
+    + ImageId : Guid <<get>> <<set>>
     + AppUser : AppUser? <<get>> <<set>>
+    + AppUserId : Guid <<get>> <<set>>
     + FileName : string? <<get>> <<set>>
     + ImagePath : string? <<get>> <<set>>
     + FormImage : IFormFile? <<get>> <<set>>
 }
-UserProfileImage --> "ImageId" Guid
-UserProfileImage --> "AppUserId" Guid
 @enduml

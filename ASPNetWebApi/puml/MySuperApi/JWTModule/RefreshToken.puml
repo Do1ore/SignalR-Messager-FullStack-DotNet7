@@ -1,7 +1,7 @@
 @startuml
 class RefreshToken {
     + Token : string <<get>> <<set>>
+    + Created : DateTime <<get>> <<set>>
+    + Expires : DateTime <<get>> <<set>>
 }
-RefreshToken o-> "Created" DateTime
-RefreshToken --> "Expires" DateTime
 @enduml

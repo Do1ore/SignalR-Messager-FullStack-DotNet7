@@ -1,8 +1,8 @@
 @startuml
 class ChatUser {
+    + UserId : Guid <<get>> <<set>>
     + User : AppUser? <<get>> <<set>>
+    + ChatId : Guid <<get>> <<set>>
     + Chat : Chat? <<get>> <<set>>
 }
-ChatUser --> "UserId" Guid
-ChatUser --> "ChatId" Guid
 @enduml

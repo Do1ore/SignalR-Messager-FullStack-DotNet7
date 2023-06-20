@@ -1,15 +1,13 @@
 @startuml
 class AppDbContext {
+    + Users : DbSet<AppUser> <<get>> <<set>>
+    + ProfileImageClaims : DbSet<ProfileImageClaims> <<get>> <<set>>
+    + ProfileImages : DbSet<UserProfileImage> <<get>> <<set>>
+    + ProfileImageStorages : DbSet<UserProfileImageStorage> <<get>> <<set>>
+    + Messages : DbSet<ChatMessage> <<get>> <<set>>
+    + Chats : DbSet<Chat> <<get>> <<set>>
+    + ChatUsers : DbSet<ChatUser> <<get>> <<set>>
     + AppDbContext(options:DbContextOptions<AppDbContext>)
 }
-class "DbSet`1"<T> {
-}
 DbContext <|-- AppDbContext
-AppDbContext --> "Users<AppUser>" "DbSet`1"
-AppDbContext --> "ProfileImageClaims<ProfileImageClaims>" "DbSet`1"
-AppDbContext --> "ProfileImages<UserProfileImage>" "DbSet`1"
-AppDbContext --> "ProfileImageStorages<UserProfileImageStorage>" "DbSet`1"
-AppDbContext --> "Messages<ChatMessage>" "DbSet`1"
-AppDbContext --> "Chats<Chat>" "DbSet`1"
-AppDbContext --> "ChatUsers<ChatUser>" "DbSet`1"
 @enduml

@@ -1,22 +1,20 @@
 @startuml
 class AppUser {
+    + Id : Guid <<get>> <<set>>
     + Username : string <<get>> <<set>>
     + Surname : string <<get>> <<set>>
     + Email : string <<get>> <<set>>
     + PasswordHash : byte[]? <<get>> <<set>>
     + PasswordSalt : byte[]? <<get>> <<set>>
     + RefreshToken : string <<get>> <<set>>
+    + TokenCreated : DateTime <<get>> <<set>>
+    + TokenExpires : DateTime <<get>> <<set>>
+    + AccountCreated : DateTime <<get>> <<set>>
+    + AccountLastTimeEdited : DateTime <<get>> <<set>>
+    + LastTimeOnline : DateTime <<get>> <<set>>
     + CurrentImageBytes : byte[]? <<get>> <<set>>
+    + UserProfileImages : ICollection<UserProfileImage> <<get>> <<set>>
+    + SentMessages : ICollection<ChatMessage> <<get>> <<set>>
+    + ReceivedMessages : ICollection<ChatMessage> <<get>> <<set>>
 }
-class "ICollection`1"<T> {
-}
-AppUser --> "Id" Guid
-AppUser --> "TokenCreated" DateTime
-AppUser --> "TokenExpires" DateTime
-AppUser --> "AccountCreated" DateTime
-AppUser --> "AccountLastTimeEdited" DateTime
-AppUser --> "LastTimeOnline" DateTime
-AppUser o-> "UserProfileImages<UserProfileImage>" "ICollection`1"
-AppUser o-> "SentMessages<ChatMessage>" "ICollection`1"
-AppUser o-> "ReceivedMessages<ChatMessage>" "ICollection`1"
 @enduml

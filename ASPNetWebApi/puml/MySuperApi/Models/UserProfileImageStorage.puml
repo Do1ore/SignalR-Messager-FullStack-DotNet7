@@ -1,9 +1,9 @@
 @startuml
 class UserProfileImageStorage {
+    + Id : Guid <<get>> <<set>>
+    + UserId : Guid <<get>> <<set>>
     + User : AppUser? <<get>> <<set>>
+    + ProfileImageId : Guid <<get>> <<set>>
     + ProfileImage : UserProfileImage? <<get>> <<set>>
 }
-UserProfileImageStorage --> "Id" Guid
-UserProfileImageStorage --> "UserId" Guid
-UserProfileImageStorage --> "ProfileImageId" Guid
 @enduml

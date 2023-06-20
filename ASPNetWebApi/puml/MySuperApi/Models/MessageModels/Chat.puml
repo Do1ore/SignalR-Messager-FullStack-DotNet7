@@ -1,12 +1,10 @@
 @startuml
 class Chat {
+    + Id : Guid <<get>> <<set>>
     + Name : string? <<get>> <<set>>
     + Lastmessage : string? <<get>> <<set>>
     + ChatAdministrator : Guid? <<get>> <<set>>
+    + Messages : ICollection<ChatMessage> <<get>> <<set>>
+    + ChatUsers : ICollection<ChatUser> <<get>> <<set>>
 }
-class "ICollection`1"<T> {
-}
-Chat --> "Id" Guid
-Chat o-> "Messages<ChatMessage>" "ICollection`1"
-Chat o-> "ChatUsers<ChatUser>" "ICollection`1"
 @enduml

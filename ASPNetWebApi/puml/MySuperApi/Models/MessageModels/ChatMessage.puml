@@ -1,11 +1,11 @@
 @startuml
 class ChatMessage {
+    + Id : Guid <<get>> <<set>>
     + Content : string? <<get>> <<set>>
+    + SentAt : DateTime <<get>> <<set>>
+    + SenderId : Guid <<get>> <<set>>
     + Sender : AppUser? <<get>> <<set>>
+    + ChatId : Guid <<get>> <<set>>
     + Chat : Chat? <<get>> <<set>>
 }
-ChatMessage --> "Id" Guid
-ChatMessage --> "SentAt" DateTime
-ChatMessage --> "SenderId" Guid
-ChatMessage --> "ChatId" Guid
 @enduml
