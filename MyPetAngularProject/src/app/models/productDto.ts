@@ -8,7 +8,7 @@ export class ProductDto {
   public rating: Rating = new Rating();
 }
 
-export class Rating {
-  public rate: number = 0;
+class Rating {
   public count: number = 0;
+  public rate: number = 0;
 }
